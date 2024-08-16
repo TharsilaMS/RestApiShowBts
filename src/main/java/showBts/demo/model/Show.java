@@ -1,19 +1,20 @@
 package showBts.demo.model;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-@Document(collection = "shows")
-public class Show {
+    @Setter
+    @Getter
+    @Document(collection = "shows")
+    public class Show {
 
-    @Id
-    private int showId;
-    private String location;
-    private String date;
-    private int availableTickets;
-}
+        @Id
+        private String id;
+        private int show_id;
+        private String location;
+        private String date;
+        private int available_tickets;
+
+    }
+

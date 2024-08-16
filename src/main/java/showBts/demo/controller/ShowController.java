@@ -22,8 +22,8 @@ public class ShowController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Show>> getAllShows() {
-        List<Show> shows = showRepository.findAll();
-        return ResponseEntity.ok(shows);
+    public List<Show> getAllShows() {
+        return showRepository.findAll();
     }
 }
+
